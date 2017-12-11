@@ -10,7 +10,7 @@ public class api1 {
 	JSONArray tab;
 	
 	
-	public JSONArray Temperature (String city) throws Exception {
+	public JSONArray Tab_json1 (String city) throws Exception {
 		JSONArray tab = new JSONArray();
 		
 			String urlString="https://www.metaweather.com/api/location/search/?query="+city;
