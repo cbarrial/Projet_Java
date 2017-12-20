@@ -56,7 +56,7 @@ public class api1 {
 	
 		JSONObject info = new JSONObject(response1);
 	    JSONArray nam1 =info.getJSONArray("consolidated_weather");
-	    for (int i=0;i<5;i++) {
+	    for (int i=0;i<=5;i++) {
 	    		tab.put(nam1.getJSONObject(i));	
 	    		
 	    }

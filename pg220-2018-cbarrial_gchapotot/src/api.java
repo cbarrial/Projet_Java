@@ -25,7 +25,7 @@ public class api extends api3{
  // HTTP GET request
  private void sendingGetRequest() throws Exception {
  
-  String urlString = "https://www.metaweather.com/api/location/580778";
+  String urlString = "https://www.prevision-meteo.ch/services/json/bordeaux";
   String urlString2 = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22bordeaux%2C%20ak%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
   
   URL url = new URL(urlString);
@@ -60,24 +60,24 @@ public class api extends api3{
   
 // first api
   //printing result from response
-  System.out.println(response.toString());
-  JSONObject info = new JSONObject(response);
-  JSONArray nam =info.getJSONArray("consolidated_weather");
-  JSONObject temp = nam.getJSONObject(0);
+  System.out.println(response2.toString());
+  //JSONObject info = new JSONObject(response);
+  //JSONArray nam =info.getJSONArray("consolidated_weather");
+  //JSONObject temp = nam.getJSONObject(0);
   
   //System.out.println((temp.getInt("max_temp")+temp.getInt("min_temp"))/2); 
   
 //second api
   //System.out.println(response2.toString());
-  JSONObject info2 = new JSONObject(response2);
+  //JSONObject info2 = new JSONObject(response2);
  
   
   JSONArray tab=Tab_json3 ("bordeaux");
   System.out.println(tab.toString());
   
-  JSONObject temp3 = tab.getJSONObject(1);
+  JSONObject temp3 = tab.getJSONObject(6);
   
-  //System.out.println((temp3.getInt("max_temp")+temp3.getInt("min_temp"))/2); 
+  System.out.println(temp3); 
   
   
   

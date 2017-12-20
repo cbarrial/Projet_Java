@@ -26,7 +26,7 @@ public static byte[] Affichage(int tab_temp1[], int tab_hum1[], int tab_speed1[]
 	 String ligne_pmeteo="| P-Meteo     |";
 	 String ligne_yweather="| Y! Weather  |";
 	 
-	
+	//cas 
 	 if (deg=="-m F") {
 		 for (int i=0;i<n+1;i++)
 				tab_temp1[i]= (int) (tab_temp1[i]*1.8+32);

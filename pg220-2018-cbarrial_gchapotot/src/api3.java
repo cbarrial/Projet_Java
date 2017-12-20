@@ -38,11 +38,17 @@ public class api3 {
 	    JSONObject temp3 =temp2.getJSONObject("channel");
     	    JSONObject temp4 =temp3.getJSONObject("item");
 		JSONArray t =temp4.getJSONArray("forecast");
+		
+		
 	    for (int i=0;i<5;i++) {
 	    		tab.put(t.getJSONObject(i));	
 	    		
 	    }
-		  
+	    
+	    JSONObject hum =temp3.getJSONObject("atmosphere");
+	    JSONObject speed =temp3.getJSONObject("wind");
+	    tab.put(hum);
+	    tab.put(speed);
 		
 		return tab;
 	}

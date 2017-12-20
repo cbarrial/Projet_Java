@@ -39,7 +39,9 @@ public class api2 {
 	    		
 	    }
 		  
-		
+	    JSONObject other =info.getJSONObject("current_condition");
+	    tab.put(other);	
+	    
 		return tab;
 	}
 	
